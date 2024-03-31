@@ -1,3 +1,4 @@
+import { title } from 'process';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './view-cocktails-app.component.scss'
 })
 export class ViewCocktailsAppComponent {
+
+  public title: string = 'What\'s your favorite cocktail';  
 
 }
