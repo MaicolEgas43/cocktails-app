@@ -5,7 +5,6 @@ import { initializeApp } from 'firebase/app';
 import {
   Firestore,
   initializeFirestore,
-  connectFirestoreEmulator,
   getFirestore,
 } from 'firebase/firestore';
 import { routes } from './app.routes';
@@ -29,7 +28,6 @@ export const FIRESTORE = new InjectionToken('Firebase firestore', {
     let firestore: Firestore;
     if (environment.useEmulators) {
       firestore = initializeFirestore(app, {});
-      connectFirestoreEmulator(firestore, 'localhost', 8080);
     } else {
       firestore = getFirestore();
     }
